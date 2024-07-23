@@ -1,0 +1,62 @@
+@font-face {
+    font-family: roman_sd;
+    src: url(font/roman_sd/Roman\ SD.ttf);
+}
+
+body{
+    font-family: "roboto";
+    font-weight: 300;
+    background-color: #FFF275;
+}
+
+nav{
+    color: #112A46;
+    
+}
+
+.list-group-item{
+    background-color: #CFE2FF;
+    color: #112A46;
+    border: 1px solid #112A46;
+}
+
+h1{
+    font-family: roman_sd;
+    font-weight: 700;
+    color: #112A46;    
+}
+
+h2{
+    font-weight: 200;
+    color: #112A46;
+}
+
+h3{
+    font-family: roman_sd;
+    font-weight: 700;
+    color: #112A46;
+}
+.sameheight{
+    height: 100%;
+}
+
+picture img{
+    width: 140px;
+    margin-bottom: 20px;
+    opacity: 85%;
+}
+
+form{
+    color: #112A46;
+}
+
+
+@media screen and (min-width: 576px) {
+
+    picture img{
+        width: 200px;
+        margin-bottom: 20px;
+    }
+    
+    
+}
