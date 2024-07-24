@@ -66,11 +66,15 @@ if (isset($_POST['first_name'])) {
     <?php if ($success): ?>
         <h2>Your message is being cooked</h2>
         <button onclick="window.location.href='./index.html'">Go Back to Main site</button>
+        <pre><?php var_dump($first_name, $last_name, $email, $subject, $comment, $checkbox);?>
+    </pre>
+        
     <?php else: ?>
         <h2>Sorry there has been an error</h2>
         <h2>Your message was not sent successfully</h2>
         <button onclick="window.location.href='./index.html'">Go Back to Main site</button>
-        </form>
+     
+    
     <?php endif; ?>
 </body>
 </html>
