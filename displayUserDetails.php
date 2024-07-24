@@ -14,27 +14,24 @@ include("config.php");
 
 <body>
 
-  <style>
-    html,
-    body {
-      background-color: gainsboro;
-    }
-  </style>
+
 
   <div class="container">
 
-    <div class="container my-5">
-      <h1 class="text-center">User Details</h1>
+    <div class="container my-5 w-75">
+      <h1 class="text-center">Manage Photos</h1>
+      <button class="text-center" type="button" onclick="location.href='./image_upload.php'">Upload another image</button>
     </div>
 
     <div class="container my-5 w-75">
-      <table class="table table-striped ">
+      <table class="table table-striped">
         <thead>
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Name</th>
             <th scope="col">Description</th>
             <th scope="col">Photo</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -52,15 +49,19 @@ include("config.php");
             $description = $row["description"];
             $photo = $row["photo"]; //'photo'
 
-            echo
-            '<tr>
+            echo '<tr>
               <th scope="row">' . $id . '</th>
               <td>' . $name . '</td>
               <td>' . $description . '</td>
-
               <!-- Display user photo -->
               <td><img src="uploads/' . $photo . '" alt="User Photo" style="width: 75px; height: 75px;"></td>
-
+              <!-- Display delete button -->
+              <td>
+                  <form method="post" action="handleinput.php" style="display:inline;">
+                      <input type="hidden" name="delete_id" value="' . $row["id"] . '">
+                      <input type="submit" value="Delete">
+                  </form>
+              </td>
             </tr>';
           }
           ?>
@@ -70,5 +71,4 @@ include("config.php");
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
-
 </html>

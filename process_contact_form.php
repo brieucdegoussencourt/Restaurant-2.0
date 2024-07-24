@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include './config.php';
 
 $success = false;
 
@@ -21,7 +21,7 @@ if (isset($_POST['delete_id'])) {
     $conn->close();
 
     // Redirect back to the backoffice page
-    header("Location: backoffice.php");
+    header("Location: ./backoffice.php");
     exit;
 }
 

@@ -1,7 +1,29 @@
 <?php
 
 // Include the file that establishes the database connection
-include("config.php");
+include("./config.php");
+
+// Check if this is a delete request
+if (isset($_POST['delete_id'])) {
+  $id = $_POST['delete_id'];
+
+  // Prepare the SQL query to delete the message
+  $sql = "DELETE FROM messages WHERE id=$id";
+
+  // Execute the query and check if the deletion was successful
+  if ($conn->query($sql) === TRUE) {
+      echo "Record deleted successfully";
+  } else {
+      echo "Error deleting record: " . $conn->error;
+  }
+
+  // Close the database connection
+  $conn->close();
+
+  // Redirect back to the upload image page
+  header("Location: ./upload_image.php");
+  exit;
+}
 
 // Check if the form is submitted
 if (isset($_POST["submit"])) {

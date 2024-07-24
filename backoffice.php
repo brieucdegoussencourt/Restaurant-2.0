@@ -32,21 +32,22 @@
                 <h2>Handle interactions with your website</h2>
             </div>
             <div class="col-12 mt-3 text-center">
-                <button type="button" onclick="location.href='./backoffice.php'">contact_form</button>
-                <button type="button" onclick="location.href='./image_upload.php'">image_upload</button>
-                <button type="button" onclick="location.href='./mail.php'">email</button>
+                <button type="button" onclick="location.href='./backoffice.php'">Form Management</button>
+                <button type="button" onclick="location.href='./image_upload.php'">Upload Image</button>
+                <button type="button" onclick="location.href='./displayUserDetails.php'">Manage Images</button>
+                <button type="button" onclick="location.href='./mail.php'">Email</button>
             </div>
-            <div class="col-12 mt-5 text-center">
-                <table border="1" class="table">
+            <div class="container my-5 w-75">
+                <table class="table table-striped">
                     <tr>
-                        <th>ID</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Subject</th>
-                        <th>Comment</th>
-                        <th>Agreed to Terms</th>
-                        <th>Action</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Comment</th>
+                        <th scope="col">Agreed to Terms</th>
+                        <th scope="col">Action</th>
                     </tr>
                     <?php
                     // Include the database configuration file
