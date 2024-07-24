@@ -23,7 +23,7 @@
             <img src="images/pizza.svg" width="40" alt="pizza icon">
         </a>
     </nav>
-    <div class="container mt-5">
+    <div class="container mt-5 max-width=md">
         <div class="row">
             <div class="col-12 text-center">
                 <h1>This is Your back office</h1>

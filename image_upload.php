@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>restaurant-2.0_BackOffice</title>
+    <title>restaurant-2.0_Image_Upload</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
             <img src="images/pizza.svg" width="40" alt="pizza icon">
         </a>
     </nav>
-    <div class="container mt-5">
+    <div class="container mt-5 max-width=md">
         <div class="row">
             <div class="col-12 text-center">
                 <h1>This is Your back office</h1>
@@ -36,58 +36,41 @@
                 <button type="button" onclick="location.href='./image_upload.php'">image_upload</button>
                 <button type="button" onclick="location.href='./mail.php'">email</button>
             </div>
-            <div class="col-12 mt-5 text-center">
-                <table border="1" class="table">
-                    <tr>
-                        <th>ID</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Subject</th>
-                        <th>Comment</th>
-                        <th>Agreed to Terms</th>
-                        <th>Action</th>
-                    </tr>
-                    <?php
-                    // Include the database configuration file
-                    include 'config.php';
-
-                    // Prepare the SQL query to retrieve messages from the database
-                    $sql = "SELECT id, first_name, last_name, email, subject, comment, checkbox FROM messages";
-                    $result = $conn->query($sql);
-
-                    // Check if there are any records returned
-                    if ($result->num_rows > 0) {
-                        // Output data for each row
-                        while($row = $result->fetch_assoc()) {
-                            echo "<tr>
-                                    <td>" . $row["id"]. "</td>
-                                    <td>" . $row["first_name"]. "</td>
-                                    <td>" . $row["last_name"]. "</td>
-                                    <td>" . $row["email"]. "</td>
-                                    <td>" . $row["subject"]. "</td>
-                                    <td>" . $row["comment"]. "</td>
-                                    <td>" . ($row["checkbox"] ? 'Yes' : 'No'). "</td>
-                                    <td>
-                                        <form method='post' action='process_contact_form.php' style='display:inline;'>
-                                            <input type='hidden' name='delete_id' value='" . $row["id"] . "'>
-                                            <input type='submit' value='Delete'>
-                                        </form>
-                                    </td>
-                                </tr>";
-                        }
-                    } else {
-                        // Display a message if no records are found
-                        echo "<tr><td colspan='8'>No messages found</td></tr>";
-                    }
-
-                    // Close the database connection
-                    $conn->close();
-                    ?>
-                </table>
-            </div>
-        </div>
+            <div class="col-12 text-center">
+            <div class="container my-5">
+      <h1 class="text-center">New Image</h1>
     </div>
+
+    <div class="container my-5 w-75">
+      <!-- Form for handling user input -->
+      <!-- Enctype attribute is set to multipart/form-data for handling file uploads -->
+      <form action="handleInput.php" method="post" enctype="multipart/form-data">
+        <!-- Input field for user's name -->
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name">
+        </div>
+
+        <!-- Input field for user's description -->
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <input type="description" class="form-control" id="description" name="description">
+        </div>
+
+        <!-- Input field for user's photo -->
+        <div class="mb-3">
+          <label for="photo" class="form-label">Photo</label>
+          <!-- Input type set to "file" for handling file uploads -->
+          <!-- Accept attribute set to "image/*" to restrict file types to images -->
+          <input type="file" class="form-control" id="photo" name="photo" accept="image/*">
+        </div>
+
+        <!-- Submit button for the form -->
+        <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+      </form>
+    </div>
+            </div>
+                
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
