@@ -35,6 +35,7 @@ include("config.php");
             <th scope="col">Name</th>
             <th scope="col">Description</th>
             <th scope="col">Photo</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -60,7 +61,12 @@ include("config.php");
 
               <!-- Display user photo -->
               <td><img src="uploads/' . $photo . '" alt="User Photo" style="width: 75px; height: 75px;"></td>
-
+              <td>
+                <form method="post" action="handleinput.php" style="display:inline;">
+                  <input type="hidden" name="delete_id" value="' . $id . '">
+                  <input type="submit" value="Delete" class="btn btn-danger">
+                </form>
+              </td>
             </tr>';
           }
           ?>
