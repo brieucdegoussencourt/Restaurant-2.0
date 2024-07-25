@@ -26,6 +26,9 @@ include("config.php");
     <div class="container my-5">
       <h1 class="text-center">User Details</h1>
     </div>
+    <div class="container my-5">
+    <button type="button" onclick="location.href='./image_upload.php'">upload</button>
+    </div>
 
     <div class="container my-5 w-75">
       <table class="table table-striped ">
