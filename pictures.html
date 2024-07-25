@@ -26,13 +26,12 @@
                 <h2>We are proud of what we do!</h2>
             </div>
         </div>
-
         <div id="carouselExampleIndicators" class="carousel slide mt-4">
-            <div class="carousel-indicators" id="carousel-indicators">
-                <!-- Indicators will be inserted here dynamically -->
+            <div class="carousel-indicators">
+                <!-- Indicators will be inserted here by JavaScript -->
             </div>
-            <div class="carousel-inner" id="carousel-inner">
-                <!-- Images will be inserted here dynamically -->
+            <div class="carousel-inner">
+                <!-- Carousel items will be inserted here by JavaScript -->
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -43,13 +42,24 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-
         <div class="container mt-5 text-center">
             <picture><img src="images/pizza.svg" class="img-fluid" alt="pizza icon"></picture>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="load_images.js"></script> <!-- Your JS file to load images dynamically -->
+    <div class="col-12 mt-3 mb-3 text-center">
+        <button type="button" class="btn btn-success" onclick="location.href='./backoffice.php'">Manage Contact Form</button>
+        <button type="button" class="btn btn-success" onclick="location.href='./image_upload.php'">Upload Images</button>
+        <button type="button" class="btn btn-success" onclick="location.href='./displayUserDetails.php'">Manage Photos</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="./CarousselItem.js"></script>
 </body>
 </html>
