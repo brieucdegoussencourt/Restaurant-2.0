@@ -1,11 +1,19 @@
 {
-    "require": {
-        "php": "^8.0",
-        "monolog/monolog": "^2.2",
-        "symfony/symfony": "^5.2",
-        "psr/log": "^2.0"
+    "name": "brieuc/restaurant-2.0",
+    "autoload": {
+        "psr-4": {
+            "Brieuc\\Restaurant20\\": "src/"
+        }
     },
-    "require-dev": {
-        "phpunit/phpunit": "^9.0"
+    "authors": [
+        {
+            "name": "brieucdegoussencourt",
+            "email": "brieuc.degoussencourt@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "ext-curl": "*",
+        "ext-json": "*"
     }
 }
