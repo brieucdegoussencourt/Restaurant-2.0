@@ -2,7 +2,7 @@
 
 WORK IN PROGRESS
 
-Works fine on local but when eployed on Heroku php is not recognised. 
+Works fine locally but when deployed on Heroku php is not recognised. 
 
 
 
