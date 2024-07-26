@@ -11,8 +11,9 @@
             "email": "brieuc.degoussencourt@gmail.com"
         }
     ],
+    "license": "proprietary",
     "require": {
-        "php": "^8.3",
+        "php": "^8.2.20",
         "ext-curl": "*",
         "ext-json": "*"
     }
