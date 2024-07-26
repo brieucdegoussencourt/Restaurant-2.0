@@ -1,0 +1,15 @@
+{
+    "name": "brieuc/restaurant-2.0",
+    "description": "Restaurant website with backend features",
+    "autoload": {
+        "psr-4": {
+            "Brieuc\\Restaurant20\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "brieucdegoussencourt",
+            "email": "brieuc.degoussencourt@gmail.com"
+        }
+    ]
+}
